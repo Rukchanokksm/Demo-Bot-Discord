@@ -22,17 +22,17 @@ export const onehHunDred: Command = {
     run: async (interaction) => {
         await interaction.deferReply();
         const { user } = interaction;
-        const text = interaction.options.get("message", true).message;
+        const text = interaction.options.get("message", true).value?.toString();
         const targetCamper = await getCamperData(user.id);
         const updateCamper = await updateCamperdata(targetCamper);
 
         const onehHunDredEmbed = new EmbedBuilder()
             .setColor(0x0099ff)
             .setTitle("Test bot 100 days naja !!")
-            .setDescription(text)
+            .setDescription("text" + text)
             .setAuthor({
                 name: user.tag,
-                iconURL: user.defaultAvatarURL
+                iconURL: user.displayAvatarURL()
             })
             .addFields([
                 {

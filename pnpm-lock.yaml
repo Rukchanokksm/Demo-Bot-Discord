@@ -29,6 +29,9 @@ dependencies:
   mongoose:
     specifier: ^7.4.3
     version: 7.4.3
+  undici:
+    specifier: ^5.23.0
+    version: 5.23.0
 
 devDependencies:
   '@types/node':

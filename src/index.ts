@@ -4,6 +4,7 @@ import { connectDatabase } from "./database/connectDatabase";
 import dotenv from "dotenv";
 import { validEnv } from "./utils/validateEnv";
 import { onInteraction } from "./events/onInteraction";
+import { onReady } from "./events/onReady";
 dotenv.config();
 
 async function main() {
@@ -11,7 +12,7 @@ async function main() {
     const bot = new Client({ intents: IntentOptions });
     await connectDatabase();
     await bot.login(process.env.BOT_TOKEN);
-    bot.on("ready", () => console.log("I Connected to discord !!!"));
+    bot.on("ready", async () => await onReady(bot));
     bot.on(
         "interactionCreate",
         async (Integration) => await onInteraction(Integration)
