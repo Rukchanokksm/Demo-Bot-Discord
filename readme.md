@@ -15,7 +15,7 @@ Before you can use this bot, make sure you have the following prerequisites:
 2.  **MongoDB Atlas**: You should have a MongoDB Atlas account and a database set up. You can sign up for MongoDB Atlas [here](https://www.mongodb.com/cloud/atlas).
 
 3.  **pnpm**: This project uses pnpm as the package manager. You can install it globally using npm with the following command:
-        ```bash
+    ```
     npm install -g pnpm
     ```
     Getting Started
