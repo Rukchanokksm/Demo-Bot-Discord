@@ -8,10 +8,8 @@ export const onReady = async (BOT: Client) => {
     const rest = new REST({ version: "9" }).setToken(
         process.env.BOT_TOKEN as string
     );
-
     try {
         console.log("Started refreshing application (/) commands.");
-
         await rest.put(
             Routes.applicationGuildCommands(
                 BOT.user?.id || "missing id",

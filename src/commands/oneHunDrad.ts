@@ -29,7 +29,7 @@ export const onehHunDred: Command = {
         const onehHunDredEmbed = new EmbedBuilder()
             .setColor(0x0099ff)
             .setTitle("Test bot 100 days naja !!")
-            .setDescription("text" + text)
+            .setDescription("text :" + text)
             .setAuthor({
                 name: user.tag,
                 iconURL: user.displayAvatarURL()
