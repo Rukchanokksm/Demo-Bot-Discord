@@ -27,6 +27,5 @@ export const help: Command = {
         await interaction.editReply({
             embeds: [helpEmbed]
         });
-        return;
     }
 };

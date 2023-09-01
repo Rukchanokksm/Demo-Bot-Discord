@@ -5,7 +5,7 @@ import { updateCamperdata } from "../modules/updateCamperData";
 
 export const onehHunDred: Command = {
     data: new SlashCommandBuilder()
-        .setName("100")
+        .setName("set")
         .setDescription("Check in for the 100 Days of Code challenge.")
         .addStringOption((option) =>
             option
@@ -14,10 +14,6 @@ export const onehHunDred: Command = {
                     "The message to go in your 100 Days of Code update."
                 )
                 .setRequired(true)
-                .addChoices({
-                    name: "100",
-                    value: "message_100"
-                })
         ),
     run: async (interaction) => {
         await interaction.deferReply();
@@ -29,7 +25,7 @@ export const onehHunDred: Command = {
         const onehHunDredEmbed = new EmbedBuilder()
             .setColor(0x0099ff)
             .setTitle("Test bot 100 days naja !!")
-            .setDescription("text :" + text)
+            .setDescription(":" + text)
             .setAuthor({
                 name: user.tag,
                 iconURL: user.displayAvatarURL()
