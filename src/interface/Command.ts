@@ -10,3 +10,8 @@ export interface Command {
         | SlashCommandSubcommandsOnlyBuilder;
     run: (interaction: CommandInteraction) => Promise<void>;
 }
+
+export interface IPrice {
+    PriceToday: number;
+    OilName: string;
+}

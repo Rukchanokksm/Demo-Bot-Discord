@@ -5,6 +5,14 @@ import dotenv from "dotenv";
 import { validEnv } from "./utils/validateEnv";
 import { onInteraction } from "./events/onInteraction";
 import { onReady } from "./events/onReady";
+
+import cors from "cors";
+import express from "express";
+
+const server = express();
+server.use(cors());
+server.use(express.json());
+
 dotenv.config();
 
 async function main() {
